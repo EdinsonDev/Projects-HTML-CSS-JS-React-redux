@@ -1,0 +1,12 @@
+select 'Consulta 1';
+SELECT nombre FROM comprador ORDER BY nombre ASC;
+select 'Consulta 2';
+SELECT producto.nombre, producto.precio, album.numero_canciones FROM producto, album WHERE producto.id = album.producto_id AND album.rating <= 9.5 ORDER BY album.rating ASC;
+select 'Consulta 3';
+SELECT nombre FROM producto WHERE autor_id = 4 ORDER BY precio ASC;
+select 'Consulta 4';
+SELECT producto.nombre FROM producto, venta WHERE venta.comprador_documento = '11243412' AND venta.producto_id= producto.id ORDER BY producto.nombre; 
+select 'Consulta 5';
+SELECT fecha FROM venta WHERE producto_id = 9;
+SELECT 'Consulta 6';
+SELECT count(precio) FROM producto JOIN cancion ON  cancion.producto_id = producto.id  WHERE precio > 2000;
